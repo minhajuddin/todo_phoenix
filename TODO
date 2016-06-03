@@ -1,0 +1,10 @@
+A user should be able to:
+
+Without JS:
+
+  1. Sign up
+  2. Create a task
+  3. List all tasks
+  4. Mark a task as complete
+
+Enhance UI with JS

@@ -1,0 +1,17 @@
+<a href='/task/new'>New Task</a>
+<ol>
+  <%= for task <- @tasks do %>
+    <li>
+      <%= task.title %>
+      <%= if !!task.completed_at do %>
+        <form action="/task/<%= task.id %>/incomplete" method="post">
+          <button type=submit>Mark Incomplete</button>
+        </form>
+      <% else %>
+        <form action="/task/<%= task.id %>/complete" method="post">
+          <button type=submit>Mark Complete</button>
+        </form>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
